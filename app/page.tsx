@@ -1,65 +1,195 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <main style={styles.page}>
+
+      {/* HERO */}
+      <section style={styles.hero}>
+        <div style={styles.overlay}>
+          <h1 style={styles.title}>PNEUSERVIS KRNOV</h1>
+
+          <p style={styles.subtitle}>
+            Jsme tu pro vás každý den
+          </p>
+
+          <p style={styles.heroText}>
+            Přezutí • Vyvážení • Opravy defektů • Kontrola pneumatik
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* SLUŽBY */}
+      <section style={styles.section}>
+        <h2 style={styles.h2}>Služby</h2>
+
+        <div style={styles.grid}>
+          <div style={styles.card}>🚗 Přezutí pneumatik</div>
+          <div style={styles.card}>⚙️ Vyvážení kol</div>
+          <div style={styles.card}>🔧 Opravy defektů</div>
+          <div style={styles.card}>📏 Kontrola tlaku</div>
+          <div style={styles.card}>🚛 Dodávky i nákladní vozy</div>
+          <div style={styles.card}>⏱️ Rychlý servis</div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* GALERIE */}
+      <section style={styles.dark}>
+        <h2 style={styles.h2}>Naše práce</h2>
+
+        <div style={styles.gallery}>
+          <img src="/foto1.jpg" style={styles.img} />
+          <img src="/foto2.jpg" style={styles.img} />
+          <img src="/foto3.jpg" style={styles.img} />
+        </div>
+
+       
+      </section>
+
+      {/* OTEVÍRACÍ DOBA */}
+      <section style={styles.section}>
+        <h2 style={styles.h2}>Otevírací doba</h2>
+
+        <div style={styles.hours}>
+          <p>Pondělí: 9:00 - 17:00</p>
+          <p>Úterý: 9:00 - 17:00</p>
+          <p>Středa: 9:00 - 17:00</p>
+          <p>Čtvrtek: 9:00 - 17:00</p>
+          <p>Pátek: 9:00 - 17:00</p>
+          <p>Sobota: 9:00 - 14:00</p>
+          <p>Neděle: 9:00 - 14:00</p>
+          <br />
+          <b>Po telefonické domluvě 24/7</b>
+        </div>
+      </section>
+
+      {/* KONTAKT */}
+      <section style={styles.contact}>
+        <h2 style={styles.h2}>Kontakt</h2>
+
+        <div style={styles.contactBox}>
+          <p>📞 <b>737 886 632</b></p>
+          <p>📍 Opavská 61, Krnov (areál Řempo)</p>
+          <p>⚡ Rychlé a férové ceny</p>
+        </div>
+      </section>
+
+    </main>
   );
 }
+
+const styles: any = {
+  page: {
+    fontFamily: "Arial, sans-serif",
+    background: "#0b1220",
+    color: "white",
+  },
+
+  hero: {
+    height: "85vh",
+    backgroundImage: "url('/hero.jpg')",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    textAlign: "center",
+    position: "relative",
+  },
+
+  overlay: {
+    background: "rgba(0,0,0,0.65)",
+    padding: "40px",
+    borderRadius: "16px",
+    maxWidth: "800px",
+  },
+
+  title: {
+    fontSize: "56px",
+    marginBottom: "10px",
+  },
+
+  subtitle: {
+    fontSize: "18px",
+    opacity: 0.9,
+    marginBottom: "10px",
+  },
+
+  heroText: {
+    opacity: 0.8,
+    fontSize: "16px",
+  },
+
+  section: {
+    padding: "80px 20px",
+    textAlign: "center",
+  },
+
+  dark: {
+    padding: "80px 20px",
+    textAlign: "center",
+    background: "#0f172a",
+  },
+
+  h2: {
+    fontSize: "34px",
+    marginBottom: "30px",
+  },
+
+  grid: {
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+    gap: "20px",
+    maxWidth: "900px",
+    margin: "0 auto",
+  },
+
+  card: {
+    background: "#111827",
+    padding: "20px",
+    borderRadius: "14px",
+    border: "1px solid #1f2937",
+  },
+
+  gallery: {
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+    gap: "15px",
+    maxWidth: "1000px",
+    margin: "0 auto",
+  },
+
+  img: {
+    width: "100%",
+    height: "220px",
+    objectFit: "cover",
+    borderRadius: "14px",
+  },
+
+  note: {
+    marginTop: "15px",
+    opacity: 0.6,
+  },
+
+  hours: {
+    maxWidth: "420px",
+    margin: "0 auto",
+    background: "#111827",
+    padding: "20px",
+    borderRadius: "14px",
+    lineHeight: "1.8",
+  },
+
+  contact: {
+    padding: "80px 20px",
+    textAlign: "center",
+    background: "#0b1220",
+  },
+
+  contactBox: {
+    maxWidth: "420px",
+    margin: "0 auto",
+    background: "#111827",
+    padding: "25px",
+    borderRadius: "14px",
+    lineHeight: "1.8",
+  },
+};
