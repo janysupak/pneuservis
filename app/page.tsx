@@ -34,7 +34,7 @@ export default function Home() {
           </p>
 
           <p style={styles.serviceText}>
-            ✔ Příprava vozidel na STK + zajištění vozidel na STK
+            ✔ Příprava vozidel na STK + zajištění STK
           </p>
 
           <p style={styles.serviceText}>
@@ -50,7 +50,7 @@ export default function Home() {
 
       {/* GALERIE */}
       <section style={styles.dark}>
-        <h2 style={styles.h2}>Naše práce</h2>
+        <h2 style={styles.h2}>Práce</h2>
 
         <div style={styles.gallery}>
           <img src="/foto1.jpg" style={styles.img} />
