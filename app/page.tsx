@@ -24,7 +24,9 @@ export default function Home() {
         <div style={styles.serviceBox}>
 
           <p style={styles.serviceText}>
-            ✔ <b>Přezutí pneumatik osobních, dodávkových i nákladních vozidel</b>
+            ✔ <b>
+              Přezutí pneumatik osobních, dodávkových i 🚛 NÁKLADNÍCH VOZIDEL
+            </b>
           </p>
 
           <p style={styles.serviceText}>
@@ -37,12 +39,6 @@ export default function Home() {
 
           <p style={styles.serviceText}>
             ✔ Výměna oleje, servis brzd, čepů a mechanických částí vozidel
-          </p>
-
-          <p style={styles.serviceText}>
-            ✔ <span style={{ color: "#ffb000", fontWeight: "bold" }}>
-              🚛 SPECIALIZACE: NÁKLADNÍ VOZIDLA
-            </span>
           </p>
 
           <p style={styles.serviceText}>
@@ -173,7 +169,7 @@ const styles: any = {
 
   gallery: {
     display: "grid",
-    gridTemplateGrid: "repeat(auto-fit, minmax(260px, 1fr))",
+    gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
     gap: "15px",
     maxWidth: "1000px",
     margin: "0 auto",
