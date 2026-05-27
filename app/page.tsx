@@ -12,7 +12,7 @@ export default function Home() {
           </p>
 
           <p style={styles.heroText}>
-            Přezutí • Vyvážení • Opravy defektů • Kontrola pneumatik
+            Přezutí • Vyvážení • Opravy defektů • Servis vozidel
           </p>
         </div>
       </section>
@@ -22,17 +22,9 @@ export default function Home() {
         <h2 style={styles.h2}>Služby</h2>
 
         <div style={styles.serviceBox}>
-          <p style={styles.serviceText}>
-            ✔ Příprava vozidel na STK + zajištění vozidel na STK
-          </p>
 
           <p style={styles.serviceText}>
-            ✔ Výměna oleje, provádíme servis veškerých mechanických částí
-            vozidel, brzdy, čepy atd.
-          </p>
-
-          <p style={styles.serviceText}>
-            ✔ Přezutí pneumatik osobních i dodávkových vozidel
+            ✔ <b>Přezutí pneumatik osobních, dodávkových i nákladních vozidel</b>
           </p>
 
           <p style={styles.serviceText}>
@@ -40,12 +32,23 @@ export default function Home() {
           </p>
 
           <p style={styles.serviceText}>
-            ✔ Kontrola tlaku a stavu pneumatik
+            ✔ Příprava vozidel na STK + zajištění vozidel na STK
+          </p>
+
+          <p style={styles.serviceText}>
+            ✔ Výměna oleje, servis brzd, čepů a mechanických částí vozidel
+          </p>
+
+          <p style={styles.serviceText}>
+            ✔ <span style={{ color: "#ffb000", fontWeight: "bold" }}>
+              🚛 SPECIALIZACE: NÁKLADNÍ VOZIDLA
+            </span>
           </p>
 
           <p style={styles.serviceText}>
             ✔ Rychlé a férové jednání
           </p>
+
         </div>
       </section>
 
@@ -94,6 +97,7 @@ export default function Home() {
   );
 }
 
+/* STYLES */
 const styles: any = {
   page: {
     fontFamily: "Arial, sans-serif",
@@ -169,7 +173,7 @@ const styles: any = {
 
   gallery: {
     display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+    gridTemplateGrid: "repeat(auto-fit, minmax(260px, 1fr))",
     gap: "15px",
     maxWidth: "1000px",
     margin: "0 auto",
