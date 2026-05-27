@@ -21,13 +21,31 @@ export default function Home() {
       <section style={styles.section}>
         <h2 style={styles.h2}>Služby</h2>
 
-        <div style={styles.grid}>
-          <div style={styles.card}>🚗 Přezutí pneumatik</div>
-          <div style={styles.card}>⚙️ Vyvážení kol</div>
-          <div style={styles.card}>🔧 Opravy defektů</div>
-          <div style={styles.card}>📏 Kontrola tlaku</div>
-          <div style={styles.card}>🚛 Dodávky i nákladní vozy</div>
-          <div style={styles.card}>⏱️ Rychlý servis</div>
+        <div style={styles.serviceBox}>
+          <p style={styles.serviceText}>
+            ✔ Příprava vozidel na STK + zajištění vozidel na STK
+          </p>
+
+          <p style={styles.serviceText}>
+            ✔ Výměna oleje, provádíme servis veškerých mechanických částí
+            vozidel, brzdy, čepy atd.
+          </p>
+
+          <p style={styles.serviceText}>
+            ✔ Přezutí pneumatik osobních i dodávkových vozidel
+          </p>
+
+          <p style={styles.serviceText}>
+            ✔ Vyvážení kol a opravy defektů
+          </p>
+
+          <p style={styles.serviceText}>
+            ✔ Kontrola tlaku a stavu pneumatik
+          </p>
+
+          <p style={styles.serviceText}>
+            ✔ Rychlé a férové jednání
+          </p>
         </div>
       </section>
 
@@ -40,8 +58,6 @@ export default function Home() {
           <img src="/foto2.jpg" style={styles.img} />
           <img src="/foto3.jpg" style={styles.img} />
         </div>
-
-       
       </section>
 
       {/* OTEVÍRACÍ DOBA */}
@@ -56,7 +72,9 @@ export default function Home() {
           <p>Pátek: 9:00 - 17:00</p>
           <p>Sobota: 9:00 - 14:00</p>
           <p>Neděle: 9:00 - 14:00</p>
+
           <br />
+
           <b>Po telefonické domluvě 24/7</b>
         </div>
       </section>
@@ -134,19 +152,19 @@ const styles: any = {
     marginBottom: "30px",
   },
 
-  grid: {
-    display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-    gap: "20px",
+  serviceBox: {
     maxWidth: "900px",
     margin: "0 auto",
+    background: "#111827",
+    padding: "35px",
+    borderRadius: "18px",
+    textAlign: "left",
+    lineHeight: "2",
   },
 
-  card: {
-    background: "#111827",
-    padding: "20px",
-    borderRadius: "14px",
-    border: "1px solid #1f2937",
+  serviceText: {
+    fontSize: "20px",
+    marginBottom: "15px",
   },
 
   gallery: {
@@ -162,11 +180,6 @@ const styles: any = {
     height: "220px",
     objectFit: "cover",
     borderRadius: "14px",
-  },
-
-  note: {
-    marginTop: "15px",
-    opacity: 0.6,
   },
 
   hours: {
